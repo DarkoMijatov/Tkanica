@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03030871-472C-4750-988A-337FCC404082}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tkanica</RootNamespace>
+    <AssemblyName>Tkanica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Folklor\Aplikacija\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>sr-Latn-RS</TargetCulture>
+    <ProductName>Tkanica</ProductName>
+    <PublisherName>Darko Mijatov</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.3.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>124D4FA4C55073DCFB0DB75E18E49E0C851C0032</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Tkanica_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kud_pargar_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveDataForm.Designer.cs">
+      <DependentUpon>ArchiveDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BalancesViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BalancesViewForm.Designer.cs">
+      <DependentUpon>BalancesViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserForm.Designer.cs">
+      <DependentUpon>ChangeUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Balance.cs" />
+    <Compile Include="Classes\Clothing.cs" />
+    <Compile Include="Classes\Log.cs" />
+    <Compile Include="Classes\Member.cs" />
+    <Compile Include="Classes\MemberGroup.cs" />
+    <Compile Include="Classes\MembershipFee.cs" />
+    <Compile Include="Classes\Reservation.cs" />
+    <Compile Include="Classes\Transaction.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="EditMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMemberForm.Designer.cs">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMembershipFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMembershipFeeForm.Designer.cs">
+      <DependentUpon>EditMembershipFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ClothingsHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\MemberGroupsHelper.cs" />
+    <Compile Include="Helpers\MembersHelper.cs" />
+    <Compile Include="Helpers\ReservationsHelper.cs" />
+    <Compile Include="Helpers\TransactionsHelper.cs" />
+    <Compile Include="Helpers\UsersHelper.cs" />
+    <Compile Include="IncomingTransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomingTransactionsForm.Designer.cs">
+      <DependentUpon>IncomingTransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputPasswordForm.Designer.cs">
+      <DependentUpon>InputPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberGroupsForm.Designer.cs">
+      <DependentUpon>MemberGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewClothingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewClothingForm.Designer.cs">
+      <DependentUpon>NewClothingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMemberForm.Designer.cs">
+      <DependentUpon>NewMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMemberGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMemberGroupForm.Designer.cs">
+      <DependentUpon>NewMemberGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMembershipFeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMembershipFeeForm.Designer.cs">
+      <DependentUpon>NewMembershipFeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewReservationForm.Designer.cs">
+      <DependentUpon>NewReservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutgoingTransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutgoingTransactionsForm.Designer.cs">
+      <DependentUpon>OutgoingTransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewArchivedDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewArchivedDataForm.Designer.cs">
+      <DependentUpon>ViewArchivedDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClothingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClothingsForm.Designer.cs">
+      <DependentUpon>ViewClothingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLogsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLogsForm.Designer.cs">
+      <DependentUpon>ViewLogsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMembersForm.Designer.cs">
+      <DependentUpon>ViewMembersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMembershipFeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMembershipFeesForm.Designer.cs">
+      <DependentUpon>ViewMembershipFeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReservationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReservationsForm.Designer.cs">
+      <DependentUpon>ViewReservationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTransactionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTransactionsForm.Designer.cs">
+      <DependentUpon>ViewTransactionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUsersForm.Designer.cs">
+      <DependentUpon>ViewUsersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ArchiveDataForm.resx">
+      <DependentUpon>ArchiveDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalancesViewForm.resx">
+      <DependentUpon>BalancesViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserForm.resx">
+      <DependentUpon>ChangeUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMemberForm.resx">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMembershipFeeForm.resx">
+      <DependentUpon>EditMembershipFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomingTransactionsForm.resx">
+      <DependentUpon>IncomingTransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputPasswordForm.resx">
+      <DependentUpon>InputPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberGroupsForm.resx">
+      <DependentUpon>MemberGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewClothingForm.resx">
+      <DependentUpon>NewClothingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMemberForm.resx">
+      <DependentUpon>NewMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMemberGroupForm.resx">
+      <DependentUpon>NewMemberGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMembershipFeeForm.resx">
+      <DependentUpon>NewMembershipFeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewReservationForm.resx">
+      <DependentUpon>NewReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutgoingTransactionsForm.resx">
+      <DependentUpon>OutgoingTransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewArchivedDataForm.resx">
+      <DependentUpon>ViewArchivedDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClothingsForm.resx">
+      <DependentUpon>ViewClothingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLogsForm.resx">
+      <DependentUpon>ViewLogsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMembersForm.resx">
+      <DependentUpon>ViewMembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMembershipFeesForm.resx">
+      <DependentUpon>ViewMembershipFeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReservationsForm.resx">
+      <DependentUpon>ViewReservationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTransactionsForm.resx">
+      <DependentUpon>ViewTransactionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewUsersForm.resx">
+      <DependentUpon>ViewUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Tkanica.Helpers.ClothingsHelper.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Tkanica_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kud_pargar_icon.ico" />
+    <Content Include="Resources\initialScript.sql" />
+    <None Include="Resources\kud-pargar-logo-deblje-figure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
